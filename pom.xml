@@ -14,7 +14,7 @@
 	</parent>
 	<groupId>com.ht</groupId>
 	<artifactId>track-it</artifactId>
-	<version>0.0.1</version>
+	<version>0.0.2-SNAPSHOT</version>
 	<name>track-it</name>
 	<description>Web Application for Managing Tasks and Notes</description>
 	<properties>
@@ -49,6 +49,6 @@
 	<scm>
 		<url>https://github.com/ht5929xp/track-it</url>
 		<connection>scm:git:https://github.com/ht5929xp/track-it.git</connection>
-	  <tag>track-it-0.0.1</tag>
+	  <tag>HEAD</tag>
   </scm>
 </project>
