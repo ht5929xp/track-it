@@ -1,12 +1,25 @@
-package trackit.models;
+package trackit.model;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
-public class Note {
-    private Organization org;//test
+public class Note extends BaseEntity {
+    private Category org;
+    private Group group;
     private User createdBy;
     private String note;
     private LocalDateTime added;
+
+    public boolean isOnDate(LocalDate date) {
+        boolean result = false;
+
+        if (this.added != null && date != null) {
+            LocalDate addedDate = added.toLocalDate();
+            return addedDate.equals(date);
+        }
+
+        return false;
+    }
 
     public User getCreatedBy() {
         return createdBy;
@@ -32,11 +45,19 @@ public class Note {
         this.added = added;
     }
 
-    public Organization getOrg() {
+    public Category getOrg() {
         return org;
     }
 
-    public void setOrg(Organization org) {
+    public void setOrg(Category org) {
         this.org = org;
+    }
+
+    public Group getGroup() {
+        return group;
+    }
+
+    public void setGroup(Group group) {
+        this.group = group;
     }
 }
